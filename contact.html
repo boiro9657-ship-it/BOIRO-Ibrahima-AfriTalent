@@ -8,8 +8,110 @@
     <title>AfriTalent</title>
 </head>
 <body>
-    <h1>AfriTalent</h1>
+    <h1></h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
+
+    <nav>
+    <main>
+       <div class="col-lg-7">
+
+    <h2>Contactez-nous</h2>
+
+    <form id="contactForm">
+
+        <div class="mb-3">
+            <label class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom">
+            <small id="nomError" class="text-danger"></small>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom">
+            <small id="prenomError" class="text-danger"></small>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+            <small id="emailError" class="text-danger"></small>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Sujet</label>
+
+            <select class="form-select" id="sujet">
+                <option value="">Choisir un sujet</option>
+                <option>Demande d'information</option>
+                <option>Support technique</option>
+                <option>Partenariat</option>
+                <option>Autre</option>
+            </select>
+
+            <small id="sujetError" class="text-danger"></small>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Message</label>
+
+            <textarea
+                class="form-control"
+                rows="5"
+                id="message"></textarea>
+
+            <small id="messageError" class="text-danger"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Envoyer
+        </button>
+
+    </form>
+
+    <div id="successMessage"
+         class="alert alert-success mt-4 d-none">
+        Votre message a été envoyé avec succès !
+    </div>
+
+</div>
+
+<div class="col-lg-5">
+
+    <div class="card p-4 shadow">
+
+        <h3>Nos coordonnées</h3>
+
+        <p>📧 contact@afritalent.com</p>
+
+        <p>📞 +221 77 123 45 67</p>
+
+        <p>📍 25 Avenue de l'Innovation,
+           Dakar, Sénégal</p>
+
+    </div>
+
+</div>
+
+<section class="container py-5">
+
+    <h2 class="text-center mb-4">Notre localisation</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=Dakar,Senegal&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+
+</section>
+</main>
+   </nav>
+   <footer>
+    
+   </footer>
+
 </body>
 </html>
