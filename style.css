@@ -164,3 +164,58 @@ img{
     margin:auto;
 }
 
+/*commit 5 /
+
+/* TABLETTE */
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size: 3rem;
+    }
+
+    .bento-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .hero{
+        text-align:center;
+    }
+
+}
+
+/* MOBILE */
+@media (max-width: 576px){
+
+    .hero h1{
+        font-size: 2.2rem;
+    }
+
+    .hero h2{
+        font-size: 1rem;
+    }
+
+    .category-card{
+        padding:20px;
+    }
+
+    .navbar-brand{
+        font-size:1.4rem;
+    }
+
+    footer{
+        text-align:center;
+    }
+
+}
+
+.bento-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+@media(max-width:768px){
+    .bento-grid{
+        grid-template-columns:1fr;
+    }
+}
