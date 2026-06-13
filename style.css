@@ -2,7 +2,7 @@
     --primary-color: #2563eb;
     --secondary-color: #0f172a;
     --accent-color: #f59e0b;
-    --light-color: #f8fafc;
+    --light-color: #63a8ec;
     --dark-color: #1e293b;
     --text-color: #475569;
 
@@ -23,7 +23,7 @@
 body{
     font-family: var(--font-body);
     color: var(--text-color);
-    background-color: var(--light-color);
+    background: #f8fafc;
     line-height:1.6;
 }
 
@@ -74,6 +74,19 @@ img{
 
 .btn-rejoindre {
   margin-bottom: 60px;
+}
+
+footer {
+    background: linear-gradient(135deg, #2f55bd, #2563eb);
+}
+.d-flex a {
+    color: rgb(8, 0, 0);
+    transition: 0.3s;
+}
+
+.d-flex a:hover {
+    color: #0d6efd;
+    transform: translateY(-3px);
 }
 
 /*commit 4/
@@ -270,5 +283,19 @@ img{
 form {
   width:    100%;
   margin: 0 auto;
+}
+
+/*commit 7/
+
+/* Animation fade-in */
+.fade-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
