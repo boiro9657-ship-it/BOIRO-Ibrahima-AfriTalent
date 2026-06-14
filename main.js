@@ -179,3 +179,96 @@ if (statsIndex) {
 
     observer.observe(statsIndex);
 }
+
+
+// Filtrage des freelances
+const filterButtons = document.querySelectorAll(".filter-btn");
+const freelancerCards = document.querySelectorAll(".freelance-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        const category = button.getAttribute("data-category");
+
+        freelancerCards.forEach(card => {
+
+            if (
+                category === "all" ||
+                card.getAttribute("data-category") === category
+            ) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+});
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        document.getElementById("nomError").textContent = "";
+        document.getElementById("emailError").textContent = "";
+        document.getElementById("sujetError").textContent = "";
+        document.getElementById("messageError").textContent = "";
+        document.getElementById("successMessage").textContent = "";
+
+        const nom = document.getElementById("nom").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const sujet = document.getElementById("sujet").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        let isValid = true;
+
+        if (nom === "") {
+            document.getElementById("nomError").textContent =
+                "Le nom est obligatoire.";
+            isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email === "") {
+            document.getElementById("emailError").textContent =
+                "L'email est obligatoire.";
+            isValid = false;
+        } else if (!emailRegex.test(email)) {
+            document.getElementById("emailError").textContent =
+                "Format d'email invalide.";
+            isValid = false;
+        }
+
+        if (sujet === "") {
+            document.getElementById("sujetError").textContent =
+                "Le sujet est obligatoire.";
+            isValid = false;
+        }
+
+        if (message.length < 20) {
+            document.getElementById("messageError").textContent =
+                "Le message doit contenir au moins 20 caractères.";
+            isValid = false;
+        }
+
+        
+            
+
+const successMessage = document.getElementById("successMessage");
+
+successMessage.textContent =
+"Votre message a été envoyé avec succès !";
+
+successMessage.classList.remove("d-none");
+
+document.getElementById("contactForm").reset();
+
+    });
+
+}
