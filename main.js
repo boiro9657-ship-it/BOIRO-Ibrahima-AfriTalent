@@ -206,6 +206,10 @@ filterButtons.forEach(button => {
     });
 });
 
+// =========================
+// Formulaire
+// =========================
+
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {

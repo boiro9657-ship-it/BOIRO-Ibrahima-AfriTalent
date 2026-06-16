@@ -181,6 +181,34 @@ footer {
     object-fit:cover;
     margin:auto;
 }
+.temoignage {
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+}
+
+.testimonial-slider .card {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+.testimonial-slider:hover{
+    animation-play-state: inherit;
+}
 
 /*commit 5 /
 
