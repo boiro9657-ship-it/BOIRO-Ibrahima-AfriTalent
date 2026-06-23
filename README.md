@@ -33,4 +33,8 @@ https://boiro9657-ship-it.github.io/BOIRO-Ibrahima-AfriTalent/
 
 ## Aperçu
 
-![Capture du site](image/capture1.png)
+![Capture du site](./image/Capture1.pnj.png)
+![Capture du site](./image/Capture2.pnj.png)
+![Capture du site](./image/Capture3.pnj.png)
+![Capture du site](./image/Capture4.pnj.png)
+![Capture du site](./image/Capture5.pnj.png)

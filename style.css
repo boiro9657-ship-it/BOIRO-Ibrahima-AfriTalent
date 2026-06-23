@@ -23,7 +23,7 @@
 body{
     font-family: var(--font-body);
     color: var(--text-color);
-    background: #f8fafc;
+    background: #8bc2f9;
     line-height:1.6;
 }
 
@@ -88,6 +88,13 @@ footer {
     color: #0d6efd;
     transform: translateY(-3px);
 }
+
+/* pour que le site reste intacte*/
+html, body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 
 /*commit 4/
 /* HERO */
